@@ -1,11 +1,12 @@
 {
   "name": "suggestions-for-registration-system",
   "version": "1.0.0",
-  "description": "",
+  "description": "- Server side rendering\r - Nodejs, Handlebars, TailwindCSS, PostgresSQL\r # Steps\r   1. npm install\r   2. change .env\r   3. npm run start:dev",
   "main": "server.js",
   "scripts": {
     "start:dev": "NODE_ENV=development nodemon server.js",
-    "build:tail": "npx tailwindcss -i ./src/main.css -o ./public/style.css --watch"
+    "build:tail": "npx tailwindcss -i ./src/main.css -o ./public/style.css --watch",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

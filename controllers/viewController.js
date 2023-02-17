@@ -11,3 +11,10 @@ exports.getLoginView = (req, res) => {
         layout: false,
     });
 };
+
+exports.getSignUpView = (req, res) => {
+    res.status(200).render('user/signup', {
+        title: 'SignUp',
+        layout: false,
+    });
+};
