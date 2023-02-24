@@ -557,9 +557,9 @@ video {
   margin: -1rem;
 }
 
-.mx-6{
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+.mx-24{
+  margin-left: 6rem;
+  margin-right: 6rem;
 }
 
 .mx-auto{
@@ -647,8 +647,8 @@ video {
   height: 553;
 }
 
-.h-\[85\]{
-  height: 85;
+.h-\[75\]{
+  height: 75;
 }
 
 .h-\[90\]{
@@ -659,8 +659,8 @@ video {
   height: 100%;
 }
 
-.min-h-\[277\]{
-  min-height: 277;
+.min-h-\[280\]{
+  min-height: 280;
 }
 
 .w-1\/2{
@@ -709,6 +709,10 @@ video {
 
 .min-w-\[100\]{
   min-width: 100;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .flex-col{
@@ -793,6 +797,11 @@ video {
   background-color: rgb(235 245 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#F5EBFF\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 235 255 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#FFD4F1\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 212 241 / var(--tw-bg-opacity));
@@ -822,12 +831,12 @@ video {
   padding: 1rem;
 }
 
-.p-5{
-  padding: 1.25rem;
-}
-
 .p-6{
   padding: 1.5rem;
+}
+
+.p-\[10\]{
+  padding: 10;
 }
 
 .px-12{
@@ -910,11 +919,6 @@ video {
 
 .font-inter{
   font-family: Inter, san-serif;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-3xl{
