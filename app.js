@@ -6,7 +6,7 @@ const xss = require("xss-clean");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const hbs = require("express-handlebars");
-// const AppError = require("./utils/appError");
+const AppError = require("./utils/appError");
 
 //ROUTERS
 const userRouter = require("./routes/userRoutes");
@@ -39,7 +39,7 @@ app.set("views", path.join(__dirname, "views"));
 
 //Serving static files
 app.use(express.static(path.join(__dirname, "public")));
-
+app.use(express.static(path.join(__dirname, "node_modules")));
 //Set security HTTP Headers
 app.use(
   helmet({
