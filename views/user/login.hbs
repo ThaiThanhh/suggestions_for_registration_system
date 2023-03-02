@@ -1,67 +1,87 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    {{! {Tailwind} }}
-    <link href="/style.css" rel="stylesheet" />
-    <link href="/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet" />
-  </head>
-  <body>
-    <section class="text-gray-600 font-inter bg-[#EBF5FF]">
-      <div
-        class="container w-full h-full px-24 mx-auto flex flex-wrap items-center"
-      >
-        {{! Login Form }}
-        <div class="w-1/2 flex items-center justify-center">
-          <div
-            class="w-[546] h-[553] bg-white rounded-3xl px-20 py-24 flex flex-col items-center"
-          >
-            <h2 class="text-primary text-3xl font-bold uppercase mb-5">Đăng nhập</h2>
-            <form action="/login" method="post" id="login-form">
-              <div class="relative mb-6 w-full">
-                <label
-                  for="mssv"
-                  class="text-xl font-normal text-[#212121] opacity-40"
-                >MSSV</label>
-                <input
-                  type="number"
-                  id="mssv"
-                  name="mssv"
-                  class="w-full bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-              <div class="relative mb-6 w-full">
-                <label
-                  for="password"
-                  class="text-xl font-normal text-[#212121] opacity-40"
-                >Mật khẩu</label>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  class="w-full bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-              <p class="text-xl font-normal text-[#212121] mb-6">Bạn chưa có tài
-                khoản
-                <a href="/sign-up" class="text-primary text-xl pl-1">Đăng ký</a>
-              </p>
-              <button
-                class="w-[173] h-[43] text-white bg-primary flex items-center justify-center border-0 py-2 px-8 focus:outline-none rounded-xl text-lg hover:bg-blue-600"
-              >Đăng nhập</button>
-            </form>
-          </div>
-        </div>
-        {{! Banner }}
-        <div class="w-1/2 flex items-center justify-center">
-          <img src="/img/login.png" class="object-contain" />
-        </div>
-      </div>
-    </section>
-  </body>
-  <script src="/sweetalert2/dist/sweetalert2.min.js"></script>
-  <script src="/axios/dist/axios.min.js"></script>
-  <script type="module" src="/js/login.js"></script>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <title>Login</title>
+        {{! {Tailwind} }}
+        <link href='/style.css' rel='stylesheet' />
+        <link href='/sweetalert2/dist/sweetalert2.min.css' rel='stylesheet' />
+    </head>
+    <body>
+        <section class='text-gray-600 font-inter bg-[#EBF5FF]'>
+            <div
+                class='container w-full h-full px-24 mx-auto flex flex-wrap items-center'
+            >
+                {{! Login Form }}
+                <div class='w-1/2 flex items-center justify-center'>
+                    <div
+                        class='w-[546] h-[553] bg-white rounded-3xl px-20 py-24 flex flex-col items-center'
+                    >
+                        <h2
+                            class='text-primary text-3xl font-bold uppercase mb-5'
+                        >Đăng nhập</h2>
+                        <form action='/login' method='post' id='login-form'>
+                            <div class='form-group relative mb-6 w-full'>
+                                <label
+                                    for='mssv'
+                                    class='text-xl font-normal text-[#212121] opacity-40'
+                                >MSSV</label>
+                                <input
+                                    rules='required'
+                                    type='text'
+                                    id='mssv'
+                                    name='mssv'
+                                    class='w-full bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                                />
+                                <span
+                                    class='form-message text-[#f33a58]'
+                                ></span>
+                            </div>
+                            <div class='form-group relative mb-6 w-full'>
+                                <label
+                                    for='password'
+                                    class='text-xl font-normal text-[#212121] opacity-40'
+                                >Mật khẩu</label>
+                                <input
+                                    rules='required|min:4'
+                                    type='password'
+                                    id='password'
+                                    name='password'
+                                    class='w-full bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                                />
+                                <span
+                                    class='form-message text-[#f33a58]'
+                                ></span>
+                            </div>
+                            <p
+                                class='text-xl font-normal text-[#212121] mb-6'
+                            >Bạn chưa có tài khoản
+                                <a
+                                    href='/sign-up'
+                                    class='text-primary text-xl pl-1'
+                                >Đăng ký</a>
+                            </p>
+                            <button
+                                class='w-[173] h-[43] text-white bg-primary flex items-center justify-center border-0 py-2 px-8 focus:outline-none rounded-xl text-lg hover:bg-blue-600'
+                            >Đăng nhập</button>
+                        </form>
+                    </div>
+                </div>
+                {{! Banner }}
+                <div class='w-1/2 flex items-center justify-center'>
+                    <img src='/img/login.png' class='object-contain' />
+                </div>
+            </div>
+        </section>
+    </body>
+    <script src='/sweetalert2/dist/sweetalert2.min.js'></script>
+    <script src='/axios/dist/axios.min.js'></script>
+    <script type='module' src='/js/login.js'></script>
+    <script src='/js/validator.js'></script>
+
+    {{! Uncomment to prevent submit default }}
+    <script>
+        var form = new Validator('#login-form');
+    </script>
 </html>
