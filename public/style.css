@@ -980,6 +980,11 @@ video {
   color: rgb(33 33 33 / var(--tw-text-opacity));
 }
 
+.text-\[\#f33a58\]{
+  --tw-text-opacity: 1;
+  color: rgb(243 58 88 / var(--tw-text-opacity));
+}
+
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));

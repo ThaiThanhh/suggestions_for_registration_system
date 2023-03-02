@@ -17,151 +17,215 @@
                     <img src='/img/signup.png' class='object-contain' />
                 </div>
 
-                {{! Sign Up Form 1 }}
-                <div class='w-1/2 flex items-center justify-center'>
+                {{! Register Form 1 }}
+                <div
+                    class='register-form-1 w-1/2 flex items-center justify-center'
+                >
                     <div
                         class='w-[546] h-[553] bg-white rounded-3xl px-20 py-24 flex flex-col items-center'
                     >
                         <h2
                             class='text-primary text-3xl font-bold uppercase mb-5'
                         >Đăng ký</h2>
-                        <div class='relative mb-6 w-full'>
-                            <label
-                                for='full-name'
-                                class='text-xl font-normal text-[#212121] opacity-40'
-                            >Họ tên</label>
-                            <input
-                                type='text'
-                                id='full-name'
-                                name='full-name'
-                                class='w-full h-[48] bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-                            />
-                        </div>
-                        <div class='relative mb-6 w-full'>
-                            <label
-                                for='mssv'
-                                class='text-xl font-normal text-[#212121] opacity-40'
-                            >MSSV</label>
-                            <input
-                                type='text'
-                                id='mssv'
-                                name='mssv'
-                                class='w-full h-[48] bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-                            />
-                        </div>
-                        <p class='text-xl font-normal text-[#212121] mb-6'>Bạn
-                            đã có tài khoản
-                            <a
-                                href='/sign-up'
-                                class='text-primary text-xl pl-1'
-                            >Đăng nhập</a>
-                        </p>
-                        <button
-                            class='w-[173] h-[43] text-primary flex items-center justify-center border-solid border-2 border-primary py-2 px-8 focus:outline-none rounded-xl text-lg hover:opacity-80'
-                        >Tiếp tục</button>
+                        <form
+                            action=''
+                            method='post'
+                            class='register-form-1 w-full flex items-center flex-col'
+                        >
+                            <div class='form-group relative mb-6 w-full'>
+                                <label
+                                    for='full-name'
+                                    class='text-xl font-normal text-[#212121] opacity-40'
+                                >Họ tên</label>
+                                <input
+                                    rules='required'
+                                    type='text'
+                                    id='full-name'
+                                    name='full-name'
+                                    class='w-full h-[48] bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                                />
+                                <span
+                                    class='form-message text-[#f33a58]'
+                                ></span>
+                            </div>
+                            <div class='form-group relative mb-6 w-full'>
+                                <label
+                                    for='mssv'
+                                    class='text-xl font-normal text-[#212121] opacity-40'
+                                >MSSV</label>
+                                <input
+                                    rules='required'
+                                    type='text'
+                                    id='mssv'
+                                    name='mssv'
+                                    class='w-full h-[48] bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                                />
+                                <span
+                                    class='form-message text-[#f33a58]'
+                                ></span>
+                            </div>
+                            <p
+                                class='text-xl font-normal text-[#212121] mb-6'
+                            >Bạn đã có tài khoản
+                                <a
+                                    href='/sign-up'
+                                    class='text-primary text-xl pl-1'
+                                >Đăng nhập</a>
+                            </p>
+                            <button
+                                class='form-1-btn w-[173] h-[43] text-primary flex items-center justify-center border-solid border-2 border-primary py-2 px-8 focus:outline-none rounded-xl text-lg hover:opacity-80'
+                            >Tiếp tục</button>
+                        </form>
                     </div>
                 </div>
 
-                {{!-- {{! Sign Up Form 2 }}
-                <div class='w-1/2 flex items-center justify-center'>
+                {{! Register Form 2 }}
+                <div
+                    class='register-form-2 w-1/2 flex items-center justify-center'
+                >
                     <div
                         class='w-[546] h-[553] bg-white rounded-3xl px-20 py-24 flex flex-col items-center'
                     >
                         <h2
                             class='text-primary text-3xl font-bold uppercase mb-5'
                         >Đăng ký</h2>
-                        <div class='relative mb-6 w-full'>
-                            <label
-                                for='major'
-                                class='text-xl font-normal text-[#212121] opacity-40'
-                            >Chuyên ngành</label>
-                            <div class='relative h-[48]'>
-                                <select
-                                    id='major'
-                                    class='w-full h-full bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-                                >
-                                    <option selected>Công nghệ Thông tin</option>
-                                    <option>Công nghệ Tri thức</option>
-                                    <option>Hệ thống Thông tin</option>
-                                    <option>Khoa học Dữ liệu</option>
-                                    <option>Khoa học Máy tính</option>
-                                    <option>Kỹ thuật Phần mềm</option>
-                                    <option>Mạng máy tính và Viễn thông</option>
-                                    <option>Thị giác máy tính</option>
-                                    <option>Trí tuệ nhân tạo</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class='relative mb-6 w-full'>
-                            <label
-                                for='career'
-                                class='text-xl font-normal text-[#212121] opacity-40'
-                            >Định hướng nghề nghiệp</label>
-                            <div class='relative h-[48]'>
-                                <select
-                                    id='career'
-                                    class='w-full h-full bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-                                >
-                                    <option selected>Web Developer</option>
-                                    <option>Mobile Developer</option>
-                                    <option>Game Developer</option>
-                                    <option>Tester</option>
-                                    <option>Database Administrator</option>
-                                    <option>Business Analyst</option>
-                                    <option>Data Engineer</option>
-                                    <option>Data Analyst</option>
-                                    <option>Big Data, Machine Learning</option>
-                                    <option>Computer Vision Engineer</option>
-                                    <option>Natural Language Processing</option>
-                                    <option>Networking</option>
-                                    <option>IT Security</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button
-                            class='w-[173] h-[43] text-primary flex items-center justify-center border-solid border-2 border-primary py-2 px-8 focus:outline-none rounded-xl text-lg hover:opacity-80'
-                        >Tiếp tục</button>
-                    </div>
-                </div> --}}
+                        <form
+                            action=''
+                            method='post'
+                            class='register-form-2 w-full flex items-center flex-col'
+                        >
+                            <div class='form-group relative mb-6 w-full'>
+                                <label
+                                    for='major'
+                                    class='text-xl font-normal text-[#212121] opacity-40'
+                                >Chuyên ngành</label>
+                                <div class='relative h-[48]'>
 
-                {{!-- {{! Sign Up Form 3 }}
-                <div class='w-1/2 flex items-center justify-center'>
+                                    <select
+                                        rules='required'
+                                        name='major'
+                                        id='major'
+                                        class='form-control w-full h-full bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                                    >
+                                        <option value=''>-- Chọn chuyên ngành --</option>
+                                        <option value='CNTT'>Công nghệ Thông tin</option>
+                                        <option value='CNTrT'>Công nghệ Tri thức</option>
+                                        <option value='HTTT'>Hệ thống Thông tin</option>
+                                        <option value='KHDL'>Khoa học Dữ liệu</option>
+                                        <option value='KHMT'>Khoa học Máy tính</option>
+                                        <option value='KTPM'>Kỹ thuật Phần mềm</option>
+                                        <option value='MMT'>Mạng máy tính và
+                                            Viễn thông</option>
+                                        <option value='TGMT'>Thị giác máy tính</option>
+                                        <option value='TTNT'>Trí tuệ nhân tạo</option>
+                                    </select>
+                                    <span
+                                        class='form-message text-[#f33a58]'
+                                    ></span>
+                                </div>
+                            </div>
+                            <div class='form-group relative mb-6 w-full'>
+                                <label
+                                    for='career'
+                                    class='text-xl font-normal text-[#212121] opacity-40'
+                                >Định hướng nghề nghiệp</label>
+                                <div class='relative h-[48]'>
+                                    <select
+                                        rules='required'
+                                        name='career'
+                                        id='career'
+                                        class='form-control w-full h-full bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                                    >
+                                        <option value=''>-- Chọn nghề nghiệp --</option>
+                                        <option>Web Developer</option>
+                                        <option>Mobile Developer</option>
+                                        <option>Game Developer</option>
+                                        <option>Tester</option>
+                                        <option>Database Administrator</option>
+                                        <option>Business Analyst</option>
+                                        <option>Data Engineer</option>
+                                        <option>Data Analyst</option>
+                                        <option>Big Data, Machine Learning</option>
+                                        <option>Computer Vision Engineer</option>
+                                        <option>Natural Language Processing</option>
+                                        <option>Networking</option>
+                                        <option>IT Security</option>
+                                    </select>
+                                    <span
+                                        class='form-message text-[#f33a58]'
+                                    ></span>
+                                </div>
+                            </div>
+                            <button
+                                class='form-2-btn w-[173] h-[43] text-primary flex items-center justify-center border-solid border-2 border-primary py-2 px-8 focus:outline-none rounded-xl text-lg hover:opacity-80'
+                            >Tiếp tục</button>
+                        </form>
+                    </div>
+                </div>
+
+                {{! Register Form 3 }}
+                <div
+                    class='register-form-3 w-1/2 flex items-center justify-center'
+                >
                     <div
                         class='w-[546] h-[553] bg-white rounded-3xl px-20 py-24 flex flex-col items-center'
                     >
                         <h2
                             class='text-primary text-3xl font-bold uppercase mb-5'
                         >Đăng ký</h2>
-                        <div class='relative mb-6 w-full'>
-                            <label
-                                for='password'
-                                class='text-xl font-normal text-[#212121] opacity-40'
-                            >Mật khẩu</label>
-                            <input
-                                type='password'
-                                id='password'
-                                name='password'
-                                class='w-full h-[48] bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-                            />
-                        </div>
-                        <div class='relative mb-6 w-full'>
-                            <label
-                                for='password-re'
-                                class='text-xl font-normal text-[#212121] opacity-40'
-                            >Nhập lại mật khẩu</label>
-                            <input
-                                type='password'
-                                id='password-re'
-                                name='password-re'
-                                class='w-full h-[48] bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-                            />
-                        </div>
-                        <button
-                            class='w-[173] h-[43] text-white bg-primary flex items-center justify-center border-0 py-2 px-8 focus:outline-none rounded-xl text-lg hover:bg-blue-600'
-                        >Hoàn tất</button>
+                        <form
+                            action=''
+                            method='post'
+                            class='register-form-3 w-full flex items-center flex-col'
+                        >
+                            <div class='form-group relative mb-6 w-full'>
+                                <label
+                                    for='password'
+                                    class='text-xl font-normal text-[#212121] opacity-40'
+                                >Mật khẩu</label>
+                                <input
+                                    rules='required|min:6'
+                                    type='password'
+                                    id='password'
+                                    name='password'
+                                    class='w-full h-[48] bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                                />
+                                <span
+                                    class='form-message text-[#f33a58]'
+                                ></span>
+                            </div>
+                            <div class='form-group relative mb-6 w-full'>
+                                <label
+                                    for='password_confirmation'
+                                    class='text-xl font-normal text-[#212121] opacity-40'
+                                >Nhập lại mật khẩu</label>
+                                <input
+                                    rules='required|confirmed'
+                                    type='password'
+                                    id='password_confirmation'
+                                    name='password_confirmation'
+                                    class='w-full h-[48] bg-white rounded-xl border border-[#D9D7D7] focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+                                />
+                                <span
+                                    class='form-message text-[#f33a58]'
+                                ></span>
+                            </div>
+                            <button
+                                class='form-3-btn w-[173] h-[43] text-white bg-primary flex items-center justify-center border-0 py-2 px-8 focus:outline-none rounded-xl text-lg hover:bg-blue-600'
+                            >Hoàn tất</button>
+                        </form>
                     </div>
-                </div> --}}
+                </div>
             </div>
         </section>
+
+        <script src='./js/core/jquery-3.6.3.min.js'></script>
+        <script src='/js/handleRegisterForm.js'></script>
+        <script src='/js/validator.js'></script>
+
+        {{! Uncomment to prevent submit default }}
+        <script> let form_1 = new Validator('.register-form-1');</script>
+        <script> let form_2 = new Validator('.register-form-2');</script>
+        <script> let form_3 = new Validator('.register-form-3');</script>
     </body>
 </html>
